@@ -21,6 +21,7 @@ optdepends=(
 	'libxcb: desktops and window title widgets'
 	'xcb-util-wm: desktops and window title widgets')
 makedepends=('git' 'python')
+backup=("etc/xdg/wkline/config.json")
 install="${_gitname}.install"
 source=("${_gitname}::git://github.com/Lokaltog/${_gitname}.git#branch=${_gitbranch}"
         "${install}")
