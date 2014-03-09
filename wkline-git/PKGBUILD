@@ -20,7 +20,7 @@ optdepends=(
 	'libmpdclient: now playing/mpd widget'
 	'libxcb: desktops and window title widgets'
 	'xcb-util-wm: desktops and window title widgets')
-makedepends=('git' 'waf')
+makedepends=('git' 'python')
 install="${_gitname}.install"
 source=("${_gitname}::git://github.com/Lokaltog/${_gitname}.git#branch=${_gitbranch}"
         "${install}")
@@ -34,11 +34,11 @@ pkgver() {
 
 build() {
 	cd "${_gitname}"
-	waf configure build --prefix=/usr
+	./waf configure build --prefix=/usr
 }
 
 package() {
 	cd "${_gitname}"
-	waf install --destdir=${pkgdir}
+	./waf install --destdir=${pkgdir}
 	install -Dm644 "LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
