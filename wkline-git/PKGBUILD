@@ -4,7 +4,7 @@ _gitname=wkline
 _gitbranch=develop
 pkgname="${_gitname}-git"
 pkgdesc='WebKit-based status line for tiling window managers.'
-pkgver=170.6b6715b
+pkgver=190.77d14e9
 pkgrel=1
 url="https://github.com/Lokaltog/${_gitname}"
 license=('MIT')
@@ -40,5 +40,7 @@ build() {
 package() {
 	cd "${_gitname}"
 	./waf install --destdir=${pkgdir}
+	install -Dm644 "docs/wkline.1" "${pkgdir}/usr/man/man1/wkline.1"
+	install -Dm644 "docs/wkline.5" "${pkgdir}/usr/man/man5/wkline.5"
 	install -Dm644 "LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
