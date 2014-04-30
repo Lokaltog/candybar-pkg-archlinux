@@ -1,4 +1,4 @@
-wkline-pkg-archlinux
-====================
+candybar-pkg-archlinux
+======================
 
-Arch Linux PKGBUILDS for wkline.
+Arch Linux PKGBUILDS for candybar.

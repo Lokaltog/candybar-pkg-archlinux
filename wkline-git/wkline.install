@@ -1,5 +1,0 @@
-post_install() {
-	echo "
-Add 'wkline &' to your xinitrc to enable wkline on startup.
-"
-}

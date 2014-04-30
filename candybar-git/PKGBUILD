@@ -1,11 +1,11 @@
 # -*- mode: sh -*-
 # Maintainer: Kim Silkebækken <kim.silkebaekken+aur@gmail.com>
 
-_gitname=wkline
+_gitname=candybar
 _gitbranch=develop
 pkgname="${_gitname}-git"
 pkgdesc="WebKit-based status line for tiling window managers."
-pkgver=190.77d14e9
+pkgver=358.e58e62a
 pkgrel=1
 url="https://github.com/Lokaltog/${_gitname}"
 license=("MIT")
@@ -20,12 +20,12 @@ optdepends=("alsa-lib: volume widget"
             "libxcb: desktops and window title widgets"
             "xcb-util-wm: desktops and window title widgets")
 makedepends=("git" "python")
-backup=("etc/xdg/wkline/config.json")
+backup=("etc/xdg/candybar/config.json")
 install="${_gitname}.install"
 source=("${_gitname}::git://github.com/Lokaltog/${_gitname}.git#branch=${_gitbranch}"
         "${install}")
 sha256sums=("SKIP"
-            "9103b23caf0427f2e88a2b1538d85b4a617e4a275cd17188a852d33aaffa0446")
+            "85d9be3c86bdb40ce3cdcd374a83768caaec535726a80c8944a743da3192e177")
 
 pkgver() {
     cd "${_gitname}"
@@ -40,7 +40,7 @@ build() {
 package() {
     cd "${_gitname}"
     ./waf install --destdir="${pkgdir}"
-    install -Dm644 "docs/wkline.1" "${pkgdir}/usr/man/man1/wkline.1"
-    install -Dm644 "docs/wkline.5" "${pkgdir}/usr/man/man5/wkline.5"
+    install -Dm644 "docs/candybar.1" "${pkgdir}/usr/man/man1/candybar.1"
+    install -Dm644 "docs/candybar.5" "${pkgdir}/usr/man/man5/candybar.5"
     install -Dm644 "LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
