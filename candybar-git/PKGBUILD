@@ -15,6 +15,7 @@ depends=("gtk3"
          "jansson")
 optdepends=("alsa-lib: volume widget"
             "curl: external ip and weather widgets"
+            "graphicsmagick: transparent background with effects"
             "libdbus: notification daemon and battery status widgets"
             "libmpdclient: now playing/mpd widget"
             "libxcb: desktops and window title widgets"
