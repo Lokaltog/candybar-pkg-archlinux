@@ -3,7 +3,6 @@
 
 _gitname=candybar
 _gitbranch=develop
-_theme='...'
 pkgname="${_gitname}-git"
 pkgdesc="WebKit-based status bar for tiling window managers"
 pkgver=396.8469d5e
