@@ -11,8 +11,7 @@ pkgrel=1
 url="https://github.com/Lokaltog/${_gitname}"
 license=("MIT")
 arch=("i686" "x86_64")
-depends=("gtk3"
-         "webkitgtk"
+depends=("webkitgtk"
          "jansson")
 optdepends=("alsa-lib: volume widget"
             "curl: external ip and weather widgets"
